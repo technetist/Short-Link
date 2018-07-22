@@ -44,7 +44,7 @@
                             <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                 @csrf
                                 <div class="form-group">
-                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                    <label class="sr-only" for="email">Email address</label>
                                         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
 
                                         @if ($errors->has('email'))
@@ -54,7 +54,7 @@
                                         @endif
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                    <label class="sr-only" for="password">Password</label>
                                         <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
 
                                         @if ($errors->has('password'))

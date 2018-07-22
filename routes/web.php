@@ -14,8 +14,6 @@
 Route::get('/', function () {
     return view('index');
 });
-
+Route::post('/shorten', 'UrlController@processUrl')->name('shorten');
 Auth::routes();
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('{hash}', 'UrlController@redirectHash')->where('hash', '[0-9a-zA-Z]{6}');
