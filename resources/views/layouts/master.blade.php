@@ -26,7 +26,7 @@
                 </a>
                 @if(Auth::check())
                     <div class="dropdown-menu dropdown-menu-right" id="login-dp" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">My Links</a>
+                        <a class="dropdown-item" href="/links">My Links</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

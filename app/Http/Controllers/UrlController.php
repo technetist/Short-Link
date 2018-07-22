@@ -46,4 +46,16 @@ class UrlController extends Controller
                 ->with('message','That link is invalid.');
         }
     }
+
+    public function deleteLink(Request $request)
+    {
+        $user_id = Auth::id();
+        $deletedLink = Link::where('user_id', $user_id)->where('id', $request->link_id)->delete();
+
+        if($deletedLink) {
+            return redirect()->back();
+        } else {
+            return redirect()->back()->with('alert','The link no longer exists, or you are not authorized to delete this link.');
+        }
+    }
 }

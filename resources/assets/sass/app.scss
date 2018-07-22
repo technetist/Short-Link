@@ -14,7 +14,9 @@
 @import "registration";
 
 html, body{
-  height:100%;
+  height: -webkit-calc(100% - 40px);
+  height:    -moz-calc(100% - 40px);
+  height:         calc(100% - 40px);
   margin:0;
   padding:0;
 }
